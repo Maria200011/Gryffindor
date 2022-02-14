@@ -1,24 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
 import cn from "classnames"
+import { useState } from 'react';
 
 function App() {
+  const [val, setVal] = useState(false)
+
+
+
+
   return (
-    <div className="App">
-      <header className={cn("App-header", )}>
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={cn("App", { "text": val})}>
+      <button onClick={()=>{setVal(true)}}>+</button>
+      <h1>Barev</h1>
     </div>
   );
 }
